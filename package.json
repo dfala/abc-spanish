@@ -1,0 +1,25 @@
+{
+  "name": "abc-spanish",
+  "version": "1.0.0",
+  "description": "",
+  "main": "magic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "an-array-of-spanish-words": "^2.0.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "http": "^0.0.1-security",
+    "i": "^0.3.7",
+    "npm": "^9.3.1",
+    "path": "^0.12.7",
+    "request-ip": "^3.3.0",
+    "silabify": "^1.0.4"
+  }
+}
