@@ -16,10 +16,15 @@ httpServer.listen(portNum, function () {
   console.log('HTTP server listening on port: ' + portNum);
 });
 
+// app.set('view engine', 'ejs');
+
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'app')));
 app.use(bodyParser.json({limit: '400mb'}));
 app.use(bodyParser.urlencoded({limit: '400mb', extended: true}));
 app.use(requestIp.mw());
 
+app.use(express.static(__dirname + '/views'));
+
 require('./API.js')(app);
+// require('./RoutesController.js')(app);

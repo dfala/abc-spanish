@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="abc">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  </head>
+  <body ng-controller="MainController">
+
+    <div class="cont">
+      <h2>Software requirements</h2>
+      <p>Words should be 3 syllables or less</p>
+      <p>Consist only of current letter and prior letters, e.g., if current letter is "m" and prior letters are "a, e, i, o, u," then "mami" is viable</p>
+      <p>Not contain accent marks, e.g., "papa" is okay but not "papá"</p>
+    </div>
+
+    <div class="cont">
+      <form ng-submit="updateLearned()" class="form-group">
+        <h2>Enter words learned, comma separated</h2>
+        <input type="text" class="form-control" ng-model="learned"/>
+        <br>
+        <button class="btn btn-default">Submit</button>
+      </form>
+    </div>
+
+    <div class="cont">
+      <table class="table table-striped" ng-cloak>
+        <tr>
+          <td>Word</td>
+          <td># of syllables</td>
+        </tr>
+        <tr ng-repeat="wordObj in words">
+          <td>{{wordObj.word}}</td>
+          <td>{{wordObj.syllableCount}}</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+
+  <footer>
+    <script type="text/javascript" src="magic.js"></script>
+  </footer>
+</html>
