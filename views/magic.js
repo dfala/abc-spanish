@@ -34,7 +34,7 @@ myApp.controller('MainController', ['$scope', '$http', function ($scope, $http) 
 
 
   var getWords = function (learnedArray) {
-    $http.put('http://localhost:3000/api/get-words', {
+    $http.put('http://147.182.184.11:3000/api/get-words', {
       words: learnedArray
     })
     .then(function (response) {
