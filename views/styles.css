@@ -1,10 +1,12 @@
 html {
   margin: 40px;
   background-color: #f6f8fa;
+  background: url("https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80") no-repeat center center fixed;
 }
 
 body {
-  background-color: #f6f8fa !important;
+  /* background-color: #f6f8fa !important; */
+  background: transparent !important;
 }
 
 .cont {
@@ -12,7 +14,18 @@ body {
   padding: 20px 40px;
   border: 1px solid #d0d7de;
   border-radius: 8px;
-  margin-bottom: 40px;
+  margin: auto auto 40px auto;
   background-color: #ffff;
   box-shadow: 0 3px 6px rgba(140,149,159,0.15);
+}
+
+.dim-cover {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: red;
+  z-index: -1;
+  background-color: #00000030;
 }
